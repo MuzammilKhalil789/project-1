@@ -111,7 +111,7 @@ class MyApp extends StatelessWidget {
                   ),
                   child: Center(child: Text('Sign-up',style: TextStyle(color: Colors.black,fontSize: 20,fontWeight: FontWeight.w700),),),
                 ),
-                SizedBox(height: 150,),
+                
                 Container(height: 40,
                 width: 250,
                   decoration: BoxDecoration(
@@ -119,7 +119,7 @@ class MyApp extends StatelessWidget {
                     borderRadius: BorderRadius.circular(15),
                     border: Border.all(color: Colors.black,width: 3),
                   ),
-                  child: Center(child: Text('Create new account or number',style: TextStyle(color: Colors.black,fontSize: 15,fontWeight: FontWeight.w700),),),
+                  child: Center(child: Text('Create new account or number',style: TextStyle(color: Colors.black,fontSize: 15,fontWeight: FontWeight.w700,),),),
                 )
 
 
