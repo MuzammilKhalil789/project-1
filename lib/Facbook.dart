@@ -6,6 +6,7 @@ class Facebook extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.white,
         title: Text('facebook',style: TextStyle(color: Colors.blue,fontSize: 40,fontWeight:FontWeight.bold,),),
         actions: [
           Icon(Icons.add_circle,color: Colors.black,),
@@ -274,7 +275,7 @@ class Facebook extends StatelessWidget {
           ),
           Divider(color: Colors.grey,thickness: 6,),
           SizedBox(height: 10,),
-          
+
         ],
       ),
     );
