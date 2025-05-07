@@ -13,7 +13,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.white,
-          title: Text('Facebook',style: TextStyle(color: Colors.blue),),
+          title: Text('facebook',style: TextStyle(color: Colors.blue,fontSize: 40,fontWeight: FontWeight.bold),),
           actions: [
             IconButton(onPressed: (){}, icon: Icon(Icons.add_circle,color: Colors.black,)),
             IconButton(onPressed: (){}, icon: Icon(Icons.search_rounded,color: Colors.black,)),
@@ -33,14 +33,14 @@ class _HomeScreenState extends State<HomeScreen> {
                 IconButton(onPressed: (){Navigator.push(context, MaterialPageRoute(builder:( context)=>HomeScreen()),);}, icon: Icon(Icons.group)),
                 IconButton(onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>HomeScreen()),);}, icon: Icon(Icons.ondemand_video)),
                 Icon(Icons.store,
-                  color: Colors.grey,
+                  color: Colors.black,
                 ),
                 Icon(Icons.notifications_none,
-                  color: Colors.grey,
+                  color: Colors.black,
                 ),
 
                 Icon(Icons.menu,
-                  color: Colors.grey,
+                  color: Colors.black,
                 ),
               ],
             ),
@@ -286,9 +286,9 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
 
             ),
-            SizedBox(height: 5),
-            Container(
-                child: Column(
+                SizedBox(height: 10,),
+                Container(
+                  child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Padding(padding: const
@@ -296,154 +296,153 @@ class _HomeScreenState extends State<HomeScreen> {
                         child: Row(
                           children: [
                             CircleAvatar(
-                                backgroundImage: AssetImage('assets/river 1.jpg'),
-                                child: Container(
-                                  height: 400,
-                                  width: 1200,
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.zero,
-                                    image: DecorationImage(image: AssetImage('assets/mount 1.webp'),fit: BoxFit.cover)
-                                  ),
-                                  child:
-                                  Padding(padding: const
-                                  EdgeInsets.all(8.0),
-                                    child: Row(
-                                      children: [
-                                        Icon(Icons.thumb_up,color: Colors.blue,),
-                                        SizedBox(width: 10,),
-                                        Text('150 Likes'),
-                                        Spacer(),
-                                        Icon(Icons.comment,color: Colors.blue,),
-                                        SizedBox(width: 10,),
-                                        Text('30 Comments'),
-                                        SizedBox(width: 10,),
-                                        Icon(Icons.share),
-                                        SizedBox(width: 10,),
-                                        Text('Share'),
-                                      ],
-                                    ),
-                                  ),
-                                )
+                              radius: 20,
+                              backgroundColor: Colors.grey,
+                              backgroundImage: AssetImage('assets/fort.jpg'),
                             ),
-
-
+                            SizedBox(width: 10,),
+                            Text('John Doe',style: TextStyle(fontWeight: FontWeight.bold),),
+                            Spacer(),
+                            Icon(Icons.more_vert),
                           ],
                         ),
                       ),
-                      SizedBox(height: 5,),
                       Container(
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
+                        height: 400,
+                        width: 1200,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.zero,
+                          image: DecorationImage(image: AssetImage('assets/mount 1.webp'),fit: BoxFit.cover),
+                        ),
+                      ),
+                      Padding(padding: const
+                      EdgeInsets.all(8.0),
+                        child: Row(
                           children: [
-                            Padding(padding: const
-                            EdgeInsets.all(8.0),
-                              child: Row(
-                                children: [
-                                  CircleAvatar(
-                                    backgroundImage: AssetImage('assets/burj 1.jpg'),
-                                    radius: 20,
-                                    backgroundColor: Colors.lightBlue,
-                                  ),
-                                  SizedBox(width: 10,),
-                                  Text('Muzammil',style: TextStyle(fontWeight: FontWeight.bold),),
-                                  Spacer(),
-                                  Icon(Icons.clear),
-                                  Icon(Icons.more_vert),
-
-                                ],
-                              ),
-                            ),
-                            Container(
-
-                              height: 400,
-                              width: 1200,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.zero,
-                                image: DecorationImage(image: AssetImage('assets/turkey 1.webp'),fit: BoxFit.cover)
-                              ),
-
-                            ),
-                            Padding(padding: const
-                            EdgeInsets.all(8.0),
-                              child: Row(
-                                children: [
-                                  Icon(Icons.thumb_up,color: Colors.blue,),
-                                  SizedBox(width: 10,),
-                                  Text('200 Likes'),
-                                  Spacer(),
-                                  Icon(Icons.comment,color: Colors.blue,),
-                                  SizedBox(width: 10,),
-                                  Text('60 Comments'),
-                                  SizedBox(width: 10,),
-                                  Icon(Icons.share),
-                                  SizedBox(width: 10,),
-                                  Text('Share'),
-                                ],
-                              ),
-                            ),
+                            Icon(Icons.thumb_up,color: Colors.blue,),
+                            SizedBox(width: 10,),
+                            Text('150 Likes'),
+                            Spacer(),
+                            Icon(Icons.comment,color: Colors.blue,),
+                            SizedBox(width: 10,),
+                            Text('30 Comments'),
+                            SizedBox(width: 10,),
+                            Icon(Icons.share),
+                            SizedBox(width: 10,),
+                            Text('Share'),
                           ],
                         ),
                       ),
-                      SizedBox(height: 5,),
+                    ],
+                  ),
+                ),
+                SizedBox(height: 5,),
+                Container(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Padding(padding: const
+                      EdgeInsets.all(8.0),
+                        child: Row(
+                          children: [
+                            CircleAvatar(
+                              radius: 20,
+                              backgroundColor: Colors.lightBlue,
+                              backgroundImage: AssetImage('assets/picture.webp'),
+                            ),
+                            SizedBox(width: 10,),
+                            Text('Muzammil',style: TextStyle(fontWeight: FontWeight.bold),),
+                            Spacer(),
+                            Icon(Icons.clear),
+                            Icon(Icons.more_vert),
+
+                          ],
+                        ),
+                      ),
                       Container(
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.center,
+                        height: 400,
+                        width: 1200,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.zero,
+                          image: DecorationImage(image: AssetImage('assets/ground 1.jpg'),fit: BoxFit.cover),
+                        ),
+                      ),
+                      Padding(padding: const
+                      EdgeInsets.all(8.0),
+                        child: Row(
                           children: [
-                            Padding(padding: const
-                            EdgeInsets.all(8.0),
-                              child: Row(
-                                children: [
-                                  CircleAvatar(
-                                    radius: 20,
-                                    backgroundColor: Colors.greenAccent,
-                                    backgroundImage: AssetImage('assets/river 1.jpg'),
-                                  ),
-                                  SizedBox(width: 10,),
-                                  Text('Ali Ibrahim',style: TextStyle(fontWeight: FontWeight.bold),),
-                                  Spacer(),
-                                  Icon(Icons.clear),
-                                  Icon(Icons.more_vert),
-                                ],
-                              ),
+                            Icon(Icons.thumb_up,color: Colors.blue,),
+                            SizedBox(width: 10,),
+                            Text('200 Likes'),
+                            Spacer(),
+                            Icon(Icons.comment,color: Colors.blue,),
+                            SizedBox(width: 10,),
+                            Text('60 Comments'),
+                            SizedBox(width: 10,),
+                            Icon(Icons.share),
+                            SizedBox(width: 10,),
+                            Text('Share'),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                SizedBox(height: 5,),
+                Container(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Padding(padding: const
+                      EdgeInsets.all(8.0),
+                        child: Row(
+                          children: [
+                            CircleAvatar(
+                              radius: 20,
+                              backgroundColor: Colors.greenAccent,
+                              backgroundImage: AssetImage('assets/nature.jpg'),
                             ),
-                            Container(
-                              height: 400,
-                              width: 1200,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.zero,
-                                image: DecorationImage(image: AssetImage('assets/burj 1.jpg'),fit: BoxFit.cover)
-                              ),
-                            ),
-                            Padding(padding: const
-                            EdgeInsets.all(8.0),
-                              child: Row(
-                                children: [
-                                  Icon(Icons.thumb_up,color: Colors.blue,),
-                                  SizedBox(width: 10,),
-                                  Text('320 Likes'),
-                                  Spacer(),
-                                  Icon(Icons.comment,color: Colors.grey,),
-                                  SizedBox(width: 10,),
-                                  Text('70 Comments'),
-                                  SizedBox(width: 10,),
-                                  Icon(Icons.share,color: Colors.grey,),
-                                  SizedBox(width: 10,),
-                                  Text('Share'),
-                                ],
-                              ),
-                            ),
-
+                            SizedBox(width: 10,),
+                            Text('Ali Ibrahim',style: TextStyle(fontWeight: FontWeight.bold),),
+                            Spacer(),
+                            Icon(Icons.clear),
+                            Icon(Icons.more_vert),
+                          ],
+                        ),
+                      ),
+                      Container(
+                        height: 400,
+                        width: 1200,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.zero,
+                          image: DecorationImage(image: AssetImage('assets/river 1.jpg'),fit: BoxFit.cover),
+                        ),
+                      ),
+                      Padding(padding: const
+                      EdgeInsets.all(8.0),
+                        child: Row(
+                          children: [
+                            Icon(Icons.thumb_up,color: Colors.blue,),
+                            SizedBox(width: 10,),
+                            Text('320 Likes'),
+                            Spacer(),
+                            Icon(Icons.comment,color: Colors.grey,),
+                            SizedBox(width: 10,),
+                            Text('70 Comments'),
+                            SizedBox(width: 10,),
+                            Icon(Icons.share,color: Colors.grey,),
+                            SizedBox(width: 10,),
+                            Text('Share'),
                           ],
                         ),
                       ),
 
+                    ],
+                  ),
+                ),
 
 
 
-                    ]  ),
-
-
-            )
         ])
     ) );
 
