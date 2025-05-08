@@ -1,5 +1,5 @@
-
 import 'package:flutter/material.dart';
+
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
@@ -13,905 +13,665 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.white,
-          title: Text('facebook',style: TextStyle(color: Colors.blue,fontSize: 40,fontWeight: FontWeight.bold),),
+          title: Text(
+            'facebook',
+            style: TextStyle(
+                color: Colors.blue, fontSize: 40, fontWeight: FontWeight.bold),
+          ),
           actions: [
-            IconButton(onPressed: (){}, icon: Icon(Icons.add_circle,color: Colors.black,)),
-            IconButton(onPressed: (){}, icon: Icon(Icons.search_rounded,color: Colors.black,)),
-            IconButton(onPressed: (){}, icon: Icon(Icons.messenger_outline,color: Colors.black,)),
+            IconButton(
+                onPressed: () {},
+                icon: Icon(
+                  Icons.add_circle,
+                  color: Colors.black,
+                )),
+            IconButton(
+                onPressed: () {},
+                icon: Icon(
+                  Icons.search_rounded,
+                  color: Colors.black,
+                )),
+            IconButton(
+                onPressed: () {},
+                icon: Icon(
+                  Icons.messenger_outline,
+                  color: Colors.black,
+                )),
           ],
-
         ),
-        body:
-        SingleChildScrollView(
+        body: SingleChildScrollView(
             scrollDirection: Axis.vertical,
-            child: Column(
-              children: [
+            child:
+                Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                  ///TODO:this row use for icons.
               Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                IconButton(onPressed: (){Navigator.push(context, MaterialPageRoute(builder:( context)=>HomeScreen(),),);}, icon: Icon(Icons.home)),
-                IconButton(onPressed: (){Navigator.push(context, MaterialPageRoute(builder:( context)=>HomeScreen()),);}, icon: Icon(Icons.group)),
-                IconButton(onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>HomeScreen()),);}, icon: Icon(Icons.ondemand_video)),
-                Icon(Icons.store,
-                  color: Colors.black,
-                ),
-                Icon(Icons.notifications_none,
-                  color: Colors.black,
-                ),
-
-                Icon(Icons.menu,
-                  color: Colors.black,
-                ),
-              ],
-            ),
-            SizedBox(height: 20,),
-            Divider(thickness: 1,color: Colors.grey,),
-            SizedBox(height: 20,),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                CircleAvatar(
-                  backgroundImage: AssetImage('assets/nature.jpg'),
-                  backgroundColor: Colors.grey,
-                ),
-                Container(
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(40),
-                    color: Colors.grey,
-                  ),
-                  height: 35,
-                  width: 320,
-                  child: Center(child: Text('Whats on Your mind?',style: TextStyle(color: Colors.black),),),
-
-                ),
-                Icon(Icons.image,
-                  color: Colors.green,
-                ),
-              ],
-            ),
-            SizedBox(height: 10,),
-            Divider(thickness: 5,
-              color: Colors.grey,
-            ),
-            SizedBox(height: 10,),
-
-
-            SingleChildScrollView(
-              scrollDirection: Axis.horizontal,
-              child: Row
-                (
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  SizedBox(width: 10,),
-                  Container(height: 400,width: 130,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      image: DecorationImage(image: AssetImage('assets/ground 1.jpg'),fit: BoxFit.cover),
-                      color: Colors.blue,
-
-                    ),
-                    child: Column(
-                      children: [
-                        SizedBox(height: 150,),
-                        CircleAvatar(backgroundColor: Colors.blue,child: Icon(Icons.add_circle,color: Colors.white,),),
-                        Spacer(),
-                        Text('Create story',style: TextStyle(color: Colors.white),),
-                        SizedBox(height: 10,)
-                      ],
-                    ),
+                  IconButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => HomeScreen(),
+                          ),
+                        );
+                      },
+                      icon: Icon(Icons.home)),
+                  IconButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => HomeScreen()),
+                        );
+                      },
+                      icon: Icon(Icons.group)),
+                  IconButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => HomeScreen()),
+                        );
+                      },
+                      icon: Icon(Icons.ondemand_video)),
+                  Icon(
+                    Icons.store,
+                    color: Colors.black,
                   ),
-                  SizedBox(width: 10,),
-                  Container(
-                    height: 400,width: 130,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      border: Border.all(color: Colors.black,width: 2),
-                      image: DecorationImage(image: AssetImage('assets/fort.jpg'),fit: BoxFit.cover),
-                      color: Colors.blueGrey,
-                    ),
-                    child: Column(
-                      children: [
-                        SizedBox(height: 10,),
-                        CircleAvatar(
-                          backgroundImage: AssetImage('assets/nature 1.jpg'),
-                        ),
-                        Spacer(),
-                        Text('Mudassir',style: TextStyle(color: Colors.white),),
-                        SizedBox(height: 10,),
-                      ],
-                    ),
+                  Icon(
+                    Icons.notifications_none,
+                    color: Colors.black,
                   ),
-                  SizedBox(width: 10,),
-                  Container(
-                    height: 400,
-                    width: 130,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      border: Border.all(color: Colors.black,width: 2),
-                      image: DecorationImage(image: AssetImage('assets/mount 1.webp'),fit: BoxFit.cover),
-                      color: Colors.lightBlue,
-                    ),
-                    child: Column(
-                      children: [
-                        SizedBox(height: 10,),
-                        CircleAvatar(
-                          backgroundImage: AssetImage('assets/nature 2.jpg'),
-                        ),
-                        Spacer(),
-                        Text('Misbah',style: TextStyle(color: Colors.white),),
-                        SizedBox(height: 10,),
-                      ],
-                    ),
+                  Icon(
+                    Icons.menu,
+                    color: Colors.black,
                   ),
-                  SizedBox(width: 10,),
-                  Container(
-                    height: 400,
-                    width: 130,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      border: Border.all(color: Colors.black,width: 2),
-                      image: DecorationImage(image: AssetImage('assets/nature.jpg'),fit: BoxFit.cover),
-                      color: Colors.orange,
-                    ),
-                    child: Column(
-                      children: [
-                        SizedBox(height: 10,),
-                        CircleAvatar(backgroundImage: AssetImage('assets/tower1.jpg'),),
-                        Spacer(),
-                        Text('Zubair',style: TextStyle(color: Colors.white),),
-                        SizedBox(height: 10,),
-                      ],
-                    ),
-                  ),
-                  SizedBox(width: 10,),
-                  Container(
-                    height: 400,
-                    width: 130,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      border: Border.all(color: Colors.black,width: 2,),
-                      image: DecorationImage(image: AssetImage('assets/nature 1.jpg'),fit: BoxFit.cover),
-                      color: Colors.brown,
-                    ),
-                    child: Column(
-                      children: [
-                        SizedBox(height: 10,),
-                        CircleAvatar(backgroundImage: AssetImage('assets/burj 1.jpg'),),
-                        Spacer(),
-                        Text('Ali',style: TextStyle(color: Colors.white),),
-                        SizedBox(height: 10,),
-                      ],
-                    ),
-                  ),
-                  SizedBox(width: 10,),
-                  Container(height: 400,
-                    width: 130,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      border: Border.all(color: Colors.black,width: 2,),
-                      image: DecorationImage(image: AssetImage('assets/nature 2.jpg'),fit: BoxFit.cover),
-                      color: Colors.deepOrangeAccent,
-                    ),
-                    child: Column(
-                      children: [
-                        SizedBox(height: 10,),
-                        CircleAvatar(backgroundImage: AssetImage('assets/nature 5.jpg'),),
-                        Spacer(),
-                        Text('Zain',style: TextStyle(color: Colors.white),),
-                        SizedBox(height: 10,),
-                      ],
-                    ),
-                  ),
-                  SizedBox(width: 10,),
-                  Container(height: 400,width: 130,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      border: Border.all(color: Colors.black,width: 2),
-                      image: DecorationImage(image: AssetImage('assets/burj 1.jpg'),fit: BoxFit.cover),
-                      color: Colors.purple,
-                    ),
-                    child: Column(
-                      children: [
-                        SizedBox(height: 10,),
-                        CircleAvatar(backgroundImage: AssetImage('assets/nature 4.webp'),),
-                        Spacer(),
-                        Text('Aamar',style: TextStyle(color: Colors.white),),
-                        SizedBox(height: 10,),
-                      ],
-                    ),
-                  ),
-                  SizedBox(width: 10,),
-                  Container(
-                    height: 400,
-                    width: 130,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      border: Border.all(color: Colors.grey,width: 2),
-                      image: DecorationImage(image: AssetImage('assets/nature 4.webp'),fit: BoxFit.cover),
-                      color: Colors.black,
-                    ),
-                    child: Column(
-                      children: [
-                        SizedBox(height: 10,),
-                        CircleAvatar(backgroundImage: AssetImage('assets/river 1.jpg'),),
-                        Spacer(),
-                        Text('Usman',style: TextStyle(color: Colors.white),),
-                        SizedBox(height: 10,),
-                      ],
-                    ),
-                  ),
-                  SizedBox(width: 10,),
-                  Container(
-                    height: 400,
-                    width: 130,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      border: Border.all(color: Colors.black,width: 2),
-                      image: DecorationImage(image: AssetImage('assets/nature 5.jpg'),fit: BoxFit.cover),
-                      color: Colors.greenAccent,
-                    ),
-                    child: Column(
-                      children: [
-                        SizedBox(height: 10,),
-                        CircleAvatar(backgroundImage: AssetImage('assets/nature 5.jpg'),),
-                        Spacer(),
-                        Text('Abdul Hadi',style: TextStyle(color: Colors.white),),
-                        SizedBox(height: 10,),
-                      ],
-                    ),
-                  ),
-                  SizedBox(width: 10,),
-                  Container(
-                    height: 400,
-                    width: 130,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      border: Border.all(color: Colors.black,width: 2),
-                      image: DecorationImage(image: AssetImage('assets/picture.webp'),fit: BoxFit.cover),
-                      color: Colors.yellow,
-                    ),
-                    child: Column(
-                      children: [
-                        SizedBox(height: 10,),
-                        CircleAvatar(backgroundImage: AssetImage('assets/picture.webp'),),
-                        Spacer(),
-                        Text('Muhammad Affan',style: TextStyle(color: Colors.white),),
-                        SizedBox(height: 10,),
-                      ],
-                    ),
-                  ),
-
-
                 ],
+              ),
+              ///TODO:row end icon,
+              SizedBox(
+                height: 20,
+              ),
+              Divider(
+                thickness: 1,
+                color: Colors.grey,
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              ///TODO row is use for whats on your mind
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  CircleAvatar(
+                    backgroundImage: AssetImage('assets/nature.jpg'),
+                    backgroundColor: Colors.grey,
+                  ),
+                  Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(40),
+                      color: Colors.grey,
+                    ),
+                    height: 35,
+                    width: 320,
+                    child: Center(
+                      child: Text(
+                        'Whats on Your mind?',
+                        style: TextStyle(color: Colors.black),
+                      ),
+                    ),
+                  ),
+                  Icon(
+                    Icons.image,
+                    color: Colors.green,
+                  ),
+                ],
+              ),
+              ///TODO:this row is end what on your mind.
+              SizedBox(
+                height: 10,
+              ),
+              Divider(
+                thickness: 5,
+                color: Colors.grey,
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                ///TODO:this row is use for stories section.
+                child: Row(
+                  children: [
+                    SizedBox(
+                      width: 10,
+                    ),
+                    Container(
+                      height: 400,
+                      width: 130,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        image: DecorationImage(
+                            image: AssetImage('assets/ground 1.jpg'),
+                            fit: BoxFit.cover),
+                        color: Colors.blue,
+                      ),
+                      child: Column(
+                        children: [
+                          SizedBox(
+                            height: 150,
+                          ),
+                          CircleAvatar(
+                            backgroundColor: Colors.blue,
+                            child: Icon(
+                              Icons.add_circle,
+                              color: Colors.white,
+                            ),
+                          ),
+                          Spacer(),
+                          Text(
+                            'Create story',
+                            style: TextStyle(color: Colors.white),
+                          ),
+                          SizedBox(
+                            height: 10,
+                          )
+                        ],
+                      ),
+                    ),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    Container(
+                      height: 400,
+                      width: 130,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        border: Border.all(color: Colors.black, width: 2),
+                        image: DecorationImage(
+                            image: AssetImage('assets/fort.jpg'),
+                            fit: BoxFit.cover),
+                        color: Colors.blueGrey,
+                      ),
+                      child: Column(
+                        children: [
+                          SizedBox(
+                            height: 10,
+                          ),
+                          CircleAvatar(
+                            backgroundImage: AssetImage('assets/nature 1.jpg'),
+                          ),
+                          Spacer(),
+                          Text(
+                            'Mudassir',
+                            style: TextStyle(color: Colors.white),
+                          ),
+                          SizedBox(
+                            height: 10,
+                          ),
+                        ],
+                      ),
+                    ),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    Container(
+                      height: 400,
+                      width: 130,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        border: Border.all(color: Colors.black, width: 2),
+                        image: DecorationImage(
+                            image: AssetImage('assets/mount 1.webp'),
+                            fit: BoxFit.cover),
+                        color: Colors.lightBlue,
+                      ),
+                      child: Column(
+                        children: [
+                          SizedBox(
+                            height: 10,
+                          ),
+                          CircleAvatar(
+                            backgroundImage: AssetImage('assets/nature 2.jpg'),
+                          ),
+                          Spacer(),
+                          Text(
+                            'Misbah',
+                            style: TextStyle(color: Colors.white),
+                          ),
+                          SizedBox(
+                            height: 10,
+                          ),
+                        ],
+                      ),
+                    ),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    Container(
+                      height: 400,
+                      width: 130,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        border: Border.all(color: Colors.black, width: 2),
+                        image: DecorationImage(
+                            image: AssetImage('assets/nature.jpg'),
+                            fit: BoxFit.cover),
+                        color: Colors.orange,
+                      ),
+                      child: Column(
+                        children: [
+                          SizedBox(
+                            height: 10,
+                          ),
+                          CircleAvatar(
+                            backgroundImage: AssetImage('assets/tower1.jpg'),
+                          ),
+                          Spacer(),
+                          Text(
+                            'Zubair',
+                            style: TextStyle(color: Colors.white),
+                          ),
+                          SizedBox(
+                            height: 10,
+                          ),
+                        ],
+                      ),
+                    ),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    Container(
+                      height: 400,
+                      width: 130,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        border: Border.all(
+                          color: Colors.black,
+                          width: 2,
+                        ),
+                        image: DecorationImage(
+                            image: AssetImage('assets/nature 1.jpg'),
+                            fit: BoxFit.cover),
+                        color: Colors.brown,
+                      ),
+                      child: Column(
+                        children: [
+                          SizedBox(
+                            height: 10,
+                          ),
+                          CircleAvatar(
+                            backgroundImage: AssetImage('assets/burj 1.jpg'),
+                          ),
+                          Spacer(),
+                          Text(
+                            'Ali',
+                            style: TextStyle(color: Colors.white),
+                          ),
+                          SizedBox(
+                            height: 10,
+                          ),
+                        ],
+                      ),
+                    ),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    Container(
+                      height: 400,
+                      width: 130,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        border: Border.all(
+                          color: Colors.black,
+                          width: 2,
+                        ),
+                        image: DecorationImage(
+                            image: AssetImage('assets/nature 2.jpg'),
+                            fit: BoxFit.cover),
+                        color: Colors.deepOrangeAccent,
+                      ),
+                      child: Column(
+                        children: [
+                          SizedBox(
+                            height: 10,
+                          ),
+                          CircleAvatar(
+                            backgroundImage: AssetImage('assets/nature 5.jpg'),
+                          ),
+                          Spacer(),
+                          Text(
+                            'Zain',
+                            style: TextStyle(color: Colors.white),
+                          ),
+                          SizedBox(
+                            height: 10,
+                          ),
+                        ],
+                      ),
+                    ),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    Container(
+                      height: 400,
+                      width: 130,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        border: Border.all(color: Colors.black, width: 2),
+                        image: DecorationImage(
+                            image: AssetImage('assets/burj 1.jpg'),
+                            fit: BoxFit.cover),
+                        color: Colors.purple,
+                      ),
+                      child: Column(
+                        children: [
+                          SizedBox(
+                            height: 10,
+                          ),
+                          CircleAvatar(
+                            backgroundImage: AssetImage('assets/nature 4.webp'),
+                          ),
+                          Spacer(),
+                          Text(
+                            'Aamar',
+                            style: TextStyle(color: Colors.white),
+                          ),
+                          SizedBox(
+                            height: 10,
+                          ),
+                        ],
+                      ),
+                    ),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    Container(
+                      height: 400,
+                      width: 130,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        border: Border.all(color: Colors.grey, width: 2),
+                        image: DecorationImage(
+                            image: AssetImage('assets/nature 4.webp'),
+                            fit: BoxFit.cover),
+                        color: Colors.black,
+                      ),
+                      child: Column(
+                        children: [
+                          SizedBox(
+                            height: 10,
+                          ),
+                          CircleAvatar(
+                            backgroundImage: AssetImage('assets/river 1.jpg'),
+                          ),
+                          Spacer(),
+                          Text(
+                            'Usman',
+                            style: TextStyle(color: Colors.white),
+                          ),
+                          SizedBox(
+                            height: 10,
+                          ),
+                        ],
+                      ),
+                    ),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    Container(
+                      height: 400,
+                      width: 130,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        border: Border.all(color: Colors.black, width: 2),
+                        image: DecorationImage(
+                            image: AssetImage('assets/nature 5.jpg'),
+                            fit: BoxFit.cover),
+                        color: Colors.greenAccent,
+                      ),
+                      child: Column(
+                        children: [
+                          SizedBox(
+                            height: 10,
+                          ),
+                          CircleAvatar(
+                            backgroundImage: AssetImage('assets/nature 5.jpg'),
+                          ),
+                          Spacer(),
+                          Text(
+                            'Abdul Hadi',
+                            style: TextStyle(color: Colors.white),
+                          ),
+                          SizedBox(
+                            height: 10,
+                          ),
+                        ],
+                      ),
+                    ),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    Container(
+                      height: 400,
+                      width: 130,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        border: Border.all(color: Colors.black, width: 2),
+                        image: DecorationImage(
+                            image: AssetImage('assets/picture.webp'),
+                            fit: BoxFit.cover),
+                        color: Colors.yellow,
+                      ),
+                      child: Column(
+                        children: [
+                          SizedBox(
+                            height: 10,
+                          ),
+                          CircleAvatar(
+                            backgroundImage: AssetImage('assets/picture.webp'),
+                          ),
+                          Spacer(),
+                          Text(
+                            'Muhammad Affan',
+                            style: TextStyle(color: Colors.white),
+                          ),
+                          SizedBox(
+                            height: 10,
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+
+                ),
+                ///TODO:this row is end for stories section
 
               ),
-
-            ),
-                SizedBox(height: 10,),
-                Container(
-                  child: Column(
+              Divider(thickness: 7,color: Colors.grey,),
+              SizedBox(
+                height: 10,
+              ),
+              ///TODO:this row is use for post related
+              Row(
+                children: [
+                  CircleAvatar(
+                    radius: 20,
+                    backgroundImage: AssetImage('assets/picture.webp'),
+                  ),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Padding(padding: const
-                      EdgeInsets.all(8.0),
-                        child: Row(
-                          children: [
-                            CircleAvatar(
-                              radius: 20,
-                              backgroundColor: Colors.grey,
-                              backgroundImage: AssetImage('assets/fort.jpg'),
-                            ),
-                            SizedBox(width: 10,),
-                            Text('John Doe',style: TextStyle(fontWeight: FontWeight.bold),),
-                            Spacer(),
-                            Icon(Icons.more_vert),
-                          ],
-                        ),
+                      ///TODO:this row is use for post member name.
+                      Row(
+                        children: [
+                          Text(
+                            'Muzammil',
+                            style: TextStyle(color: Colors.black),
+                          ),
+                          SizedBox(
+                            width: 5,
+                          ),
+                          Icon(
+                            Icons.check_circle,
+                            color: Colors.blue,
+                          ),
+                          SizedBox(
+                            width: 5,
+                          ),
+                          Text(
+                            'Follow',
+                            style: TextStyle(color: Colors.blue),
+                          ),
+                        ],
                       ),
-                      Container(
-                        height: 400,
-                        width: 1200,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.zero,
-                          image: DecorationImage(image: AssetImage('assets/mount 1.webp'),fit: BoxFit.cover),
-                        ),
-                      ),
-                      Padding(padding: const
-                      EdgeInsets.all(8.0),
-                        child: Row(
-                          children: [
-                            Icon(Icons.thumb_up,color: Colors.blue,),
-                            SizedBox(width: 10,),
-                            Text('150 Likes'),
-                            Spacer(),
-                            Icon(Icons.comment,color: Colors.blue,),
-                            SizedBox(width: 10,),
-                            Text('30 Comments'),
-                            SizedBox(width: 10,),
-                            Icon(Icons.share),
-                            SizedBox(width: 10,),
-                            Text('Share'),
-                          ],
-                        ),
-                      ),
+                      ///TODO:this row is end for o\post member name
+                      Row(
+                        ///TODO:this row is use for 1 hr
+                        children: [
+                          Text(
+                            '1hr',
+                            style: TextStyle(color: Colors.grey),
+                          ),
+                          SizedBox(
+                            width: 5,
+                          ),
+                          Icon(
+                            Icons.public,
+                            size: 20,
+                          ),
+                        ],
+                      ),///TODO:this row is end for 1hr line.
                     ],
                   ),
+                  Spacer(),
+                  Icon(Icons.more_horiz),
+                  Icon(Icons.clear),
+                ],
+              ),
+              Text('This post and use flutter widget and grouping and spacer'),
+              Container(
+                height: 450,
+                width: 1250,
+                decoration: BoxDecoration(
+                  image: DecorationImage(image: AssetImage('assets/ground 1.jpg'),fit: BoxFit.cover),
                 ),
-                SizedBox(height: 5,),
-                Container(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
+              ),
+              Row(///TODO this row is the like comments impression
+                children: [
+                  Row(///TODO: this row is use for like comment icon.
                     children: [
-                      Padding(padding: const
-                      EdgeInsets.all(8.0),
-                        child: Row(
-                          children: [
-                            CircleAvatar(
-                              radius: 20,
-                              backgroundColor: Colors.lightBlue,
-                              backgroundImage: AssetImage('assets/picture.webp'),
-                            ),
-                            SizedBox(width: 10,),
-                            Text('Muzammil',style: TextStyle(fontWeight: FontWeight.bold),),
-                            Spacer(),
-                            Icon(Icons.clear),
-                            Icon(Icons.more_vert),
+                      Icon(Icons.thumb_up_alt_outlined,size: 10,color: Colors.blue,),
+                      Icon(Icons.favorite,size: 10,color: Colors.red,),
+                      Text('123'),
 
-                          ],
-                        ),
-                      ),
-                      Container(
-                        height: 400,
-                        width: 1200,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.zero,
-                          image: DecorationImage(image: AssetImage('assets/ground 1.jpg'),fit: BoxFit.cover),
-                        ),
-                      ),
-                      Padding(padding: const
-                      EdgeInsets.all(8.0),
-                        child: Row(
-                          children: [
-                            Icon(Icons.thumb_up,color: Colors.blue,),
-                            SizedBox(width: 10,),
-                            Text('200 Likes'),
-                            Spacer(),
-                            Icon(Icons.comment,color: Colors.blue,),
-                            SizedBox(width: 10,),
-                            Text('60 Comments'),
-                            SizedBox(width: 10,),
-                            Icon(Icons.share),
-                            SizedBox(width: 10,),
-                            Text('Share'),
-                          ],
-                        ),
-                      ),
                     ],
-                  ),
-                ),
-                SizedBox(height: 5,),
-                Container(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.center,
+                  ),///TODO: this row is end like comment icon
+
+                ],
+              ),///TODO: this row is end the like comment impressiopns.
+              Row(///TODO :this row is use for like,comment,share
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Row(///TODO this row is the group1
                     children: [
-                      Padding(padding: const
-                      EdgeInsets.all(8.0),
-                        child: Row(
-                          children: [
-                            CircleAvatar(
-                              radius: 20,
-                              backgroundColor: Colors.greenAccent,
-                              backgroundImage: AssetImage('assets/nature.jpg'),
-                            ),
-                            SizedBox(width: 10,),
-                            Text('Ali Ibrahim',style: TextStyle(fontWeight: FontWeight.bold),),
-                            Spacer(),
-                            Icon(Icons.clear),
-                            Icon(Icons.more_vert),
-                          ],
-                        ),
+                      Icon(Icons.thumb_up,color: Colors.blue,),
+                      Text('Like'),
+                    ],
+                  ),///TODO:this row is end group1
+                  Row(///TODO:this row is the group2
+                    children: [
+                      Icon(Icons.comment),
+                      Text('Comment'),
+                    ],
+                  ),///TODO: this row is end group2.
+                  Row(///TODO: this row is group3
+                    children: [
+                      Icon(Icons.share_outlined),
+                      Text('share'),
+                      SizedBox(width: 5,),
+                    ],
+                  ),///TODO: this row is the end group3
+                ],
+              ),
+                  Divider(thickness: 6,color: Colors.grey,),
+                  Row(
+                    children: [
+                      CircleAvatar(radius: 20,
+                      backgroundImage: AssetImage('assets/ground 1.jpg'),
                       ),
-                      Container(
-                        height: 400,
-                        width: 1200,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.zero,
-                          image: DecorationImage(image: AssetImage('assets/river 1.jpg'),fit: BoxFit.cover),
-                        ),
+                      SizedBox(width: 10,),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Row(
+                            children: [
+                              Text('Shahida Khan'),
+                              Icon(Icons.check_circle,color: Colors.blue,),
+                              Text('Follow',style: TextStyle(color: Colors.blue),),
+                            ],
+                          ),
+                          Row(
+                            children: [
+                              Text('1d.'),
+                              Icon(Icons.public),
+                            ],
+                          ),
+                        ],
                       ),
-                      Padding(padding: const
-                      EdgeInsets.all(8.0),
-                        child: Row(
-                          children: [
-                            Icon(Icons.thumb_up,color: Colors.blue,),
-                            SizedBox(width: 10,),
-                            Text('320 Likes'),
-                            Spacer(),
-                            Icon(Icons.comment,color: Colors.grey,),
-                            SizedBox(width: 10,),
-                            Text('70 Comments'),
-                            SizedBox(width: 10,),
-                            Icon(Icons.share,color: Colors.grey,),
-                            SizedBox(width: 10,),
-                            Text('Share'),
-                          ],
-                        ),
-                      ),
-
+                      Spacer(),
+                      Icon(Icons.more_horiz),
+                      SizedBox(width: 5,),
+                      Icon(Icons.clear),
                     ],
                   ),
-                ),
-
-
-
-        ])
-    ) );
-
-
-
-
-
-
-
-
-  }}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+                  Text('this post is the beauty'),
+                  Container(
+                    height: 450,
+                    width: 1250,
+                    decoration: BoxDecoration(
+                      image: DecorationImage(image: AssetImage('assets/nature 1.jpg'),fit: BoxFit.cover),
+                    ),
+                  ),
+                  Row(
+                    children: [
+                      Row(
+                        children: [
+                          Icon(Icons.thumb_up_alt_outlined,color: Colors.blue,size: 10,),
+                          Icon(Icons.favorite,color: Colors.red,size: 10,),
+                          Text('230'),
+                        ],
+                      ),
+                    ],
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Row(
+                        children: [
+                          Icon(Icons.thumb_up,color: Colors.blue,),
+                          Text('Like'),
+                        ],
+                      ),
+                      Row(
+                        children: [
+                          Icon(Icons.comment),
+                          Text('comments'),
+                        ],
+                      ),
+                      Row(
+                        children: [
+                          Icon(Icons.share_outlined),
+                          Text('share'),
+                        ],
+                      ),
+                    ],
+                  ),
+            ])));
+  }
+}
 
 // import 'package:flutter/material.dart';
 // class Facebook extends StatelessWidget {
