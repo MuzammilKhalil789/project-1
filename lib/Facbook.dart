@@ -100,46 +100,42 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
               ///TODO row is use for whats on your mind
               Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  CircleAvatar(
-                    backgroundImage: AssetImage('assets/nature.jpg'),
-                    backgroundColor: Colors.grey,
-                  ),
-                  Container(
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(40),
-                      color: Colors.grey,
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    CircleAvatar(
+                      backgroundImage: AssetImage('assets/nature.jpg'),
+                      backgroundColor: Colors.grey,
                     ),
-                    height: 35,
-                    width: 320,
-                    child: Center(
-                      child: Text(
-                        'Whats on Your mind?',
-                        style: TextStyle(color: Colors.black),
+                    Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(40),
+                        color: Colors.grey,
+                      ),
+                      height: 35,
+                      width: 320,
+                      child: Center(
+                        child: Text(
+                          'Whats on Your mind?',
+                          style: TextStyle(color: Colors.black),
+                        ),
                       ),
                     ),
-                  ),
-                  Icon(
-                    Icons.image,
-                    color: Colors.green,
-                  ),
-                ],
+                    Icon(
+                      Icons.image,
+                      color: Colors.green,
+                    ),
+                  ],
+                ),
+                ]
               ),
               ///TODO:this row is end what on your mind.
-              SizedBox(
-                height: 10,
-              ),
-              Divider(
-                thickness: 5,
-                color: Colors.grey,
-              ),
+
+
               SizedBox(
                 height: 10,
               ),
               SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
-                ///TODO:this row is use for stories section.
                 child: Row(
                   children: [
                     SizedBox(
@@ -202,7 +198,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           ),
                           Spacer(),
                           Text(
-                            'Mudassir',
+                            'Muhammad',
                             style: TextStyle(color: Colors.white),
                           ),
                           SizedBox(
@@ -235,7 +231,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           ),
                           Spacer(),
                           Text(
-                            'Misbah',
+                            'Ahmad',
                             style: TextStyle(color: Colors.white),
                           ),
                           SizedBox(
@@ -268,7 +264,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           ),
                           Spacer(),
                           Text(
-                            'Zubair',
+                            'Ali',
                             style: TextStyle(color: Colors.white),
                           ),
                           SizedBox(
@@ -300,7 +296,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             height: 10,
                           ),
                           CircleAvatar(
-                            backgroundImage: AssetImage('assets/burj 1.jpg'),
+                            backgroundImage: AssetImage('assets/fort 1.jpg'),
                           ),
                           Spacer(),
                           Text(
@@ -373,7 +369,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           ),
                           Spacer(),
                           Text(
-                            'Aamar',
+                            'Ammar',
                             style: TextStyle(color: Colors.white),
                           ),
                           SizedBox(
@@ -472,7 +468,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           ),
                           Spacer(),
                           Text(
-                            'Muhammad Affan',
+                            'Muhammad Afnan',
                             style: TextStyle(color: Colors.white),
                           ),
                           SizedBox(
@@ -583,13 +579,13 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),///TODO:this row is end group1
                   Row(///TODO:this row is the group2
                     children: [
-                      Icon(Icons.comment),
+                      Icon(Icons.comment,color: Colors.grey,),
                       Text('Comment'),
                     ],
                   ),///TODO: this row is end group2.
                   Row(///TODO: this row is group3
                     children: [
-                      Icon(Icons.share_outlined),
+                      Icon(Icons.share_outlined,color: Colors.grey,),
                       Text('share'),
                       SizedBox(width: 5,),
                     ],
@@ -657,19 +653,169 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                       Row(
                         children: [
-                          Icon(Icons.comment),
-                          Text('comments'),
+                          Icon(Icons.comment,color: Colors.grey,),
+                          Text('comments',),
                         ],
                       ),
                       Row(
                         children: [
-                          Icon(Icons.share_outlined),
+                          Icon(Icons.share_outlined,color: Colors.grey,),
                           Text('share'),
                         ],
                       ),
                     ],
                   ),
-            ])));
+                  Divider(thickness: 7,color: Colors.grey,),
+                  Row(///TODO:this row is the post related
+                    children: [
+                      CircleAvatar(radius: 20,
+                      backgroundImage: AssetImage('assets/mount 1.webp'),
+                      ),
+                      SizedBox(width: 10,),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Row(
+                            children: [
+                              Text('Ali Ibrahim'),
+                              SizedBox(width: 5,),
+                              Icon(Icons.check_circle,color: Colors.blue,),
+                              SizedBox(width: 5,),
+                              Text('Follow',style: TextStyle(color: Colors.blue),),
+                            ],
+                          ),
+                          Row(
+                            children: [
+                              Text('2hr.'),
+                              SizedBox(width: 5,),
+                              Icon(Icons.public),
+                            ],
+                          ),
+                        ],
+                      ),
+                      Spacer(),
+                      Icon(Icons.more_horiz),
+                      SizedBox(width: 10,),
+                      Icon(Icons.clear),
+                    ],
+                  ),///TODO :this row is end post related.
+                  Container(
+                    height: 450,
+                    width: 1200,
+                    decoration: BoxDecoration(
+                     image: DecorationImage(image: AssetImage('assets/picture.webp'),fit: BoxFit.cover),
+                    ),
+                  ),
+                  Row(
+                    children: [
+                      Row(
+                        children: [
+                          Icon(Icons.thumb_up_alt_outlined,color: Colors.blue,size: 10,),
+                          Icon(Icons.favorite,color: Colors.red,size: 10,),
+                          Text('567'),
+                        ],
+                      ),
+                    ],
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Row(
+                        children: [
+                          Icon(Icons.thumb_up,color: Colors.blue,),
+                          Text('Like'),
+                        ],
+                      ),
+                      Row(
+                        children: [
+                          Icon(Icons.comment,color: Colors.grey,),
+                          Text('comments'),
+                        ],
+                      ),
+                      Row(
+                        children: [
+                          Icon(Icons.share_outlined,color: Colors.grey,),
+                          Text('share'),
+                        ],
+                      ),
+                    ],
+                  ),
+                  Divider(thickness: 7,color: Colors.grey,),
+                  Row(
+                    children: [
+                      CircleAvatar(radius: 20,
+                        backgroundImage: AssetImage('assets/turkey 1.webp'),
+
+                      ),
+                      SizedBox(width: 10,),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Row(
+                            children: [
+                              Text('Mudassir khan'),
+                              SizedBox(width: 5,),
+                              Icon(Icons.check_circle,color: Colors.blue,),
+                              Text('Follow',style: TextStyle(color: Colors.blue),),
+                            ],
+                          ),
+                          Row(
+                            children: [
+                              Text('3d.'),
+                              SizedBox(width: 5,),
+                              Icon(Icons.public),
+                            ],
+                          ),
+                        ],
+                      ),
+                      Spacer(),
+                      Icon(Icons.more_horiz),
+                      SizedBox(width: 10,),
+                      Icon(Icons.clear),
+                    ],
+                  ),
+                  Text('This is post of the nature of flutter and extraordinary platform'),
+                  Container(
+                    height: 450,
+                    width: 1250,
+                    decoration: BoxDecoration(
+                       image: DecorationImage(image: AssetImage('assets/river 1.jpg'),fit: BoxFit.cover),
+                    ),
+                  ),
+                  Row(
+                    children: [
+                      Row(
+                        children: [
+                          Icon(Icons.thumb_up_alt_outlined,color: Colors.blue,size: 10,),
+                          Icon(Icons.favorite,color: Colors.red,size: 10,),
+                          Text('123'),
+                        ],
+                      ),
+                    ],
+                  ),
+                  Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Row(
+                        children: [
+                          Icon(Icons.thumb_up,color: Colors.blue,),
+                          Text('Like'),
+                        ],
+                      ),
+                      Row(
+                        children: [
+                          Icon(Icons.comment,color: Colors.grey,),
+                          Text('comments'),
+                        ],
+                      ),
+                      Row(
+                        children: [
+                          Icon(Icons.share_outlined,color: Colors.grey,),
+                          Text('share'),
+                        ],
+                      ),
+                    ],
+                  ),
+            ));
   }
 }
 
